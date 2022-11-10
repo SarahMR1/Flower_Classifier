@@ -25,4 +25,4 @@ def load_checkpoint(filepath):
     
     return model
 
-model=load_checkpoint('checkpoint1.pth')
+model=load_checkpoint('checkpoint.pth')
