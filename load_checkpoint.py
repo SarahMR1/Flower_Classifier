@@ -21,7 +21,7 @@ def load_checkpoint(filepath):
     model.fc=classifier                                
     
     model.load_state_dict(checkpoint['state_dict'])
-   # model.idx_to_class = checkpoint['idx_to_class']
+    model.idx_to_class = checkpoint['idx_to_class']
     
     return model
 
