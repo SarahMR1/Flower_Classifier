@@ -10,11 +10,12 @@ import matplotlib.pyplot as plt
 def load_checkpoint(filepath):
    
     checkpoint = torch.load(filepath)
+    hidden_units = checkpoint['hidden_layers']
     model = models.resnet18(pretrained=True)
-    classifier = nn.Sequential( nn.Linear(512, 256),
+    classifier = nn.Sequential( nn.Linear(512, hidden_units),
                                nn.ReLU(),
                                nn.Dropout(p=0.2),
-                               nn.Linear(256, 102),
+                               nn.Linear(hidden_units, 102),
                                nn.ReLU(),
                                nn.LogSoftmax(dim=1))
                           
