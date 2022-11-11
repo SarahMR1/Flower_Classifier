@@ -151,4 +151,5 @@ checkpoint={'arch':arch,
 
            }
 
-torch.save(save_dir, 'checkpoint1.pth')
+
+torch.save(checkpoint, save_dir)
